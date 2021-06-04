@@ -15,16 +15,16 @@ def objective_function(X):
     """ X is a list of values of all x, y, z etc.
     Returns value of the function"""
     A = 10
-    # y = A * 2 + sum([(x ** 2 - A * np.cos(2 * math.pi * x)) for x in X]) # 1
+    y = A * 2 + sum([(x ** 2 - A * np.cos(2 * math.pi * x)) for x in X]) # 1
     # y = (X[0] + 2 * X[1] - 7) ** 2 + (2 * X[0] + X[1] - 5) ** 2  # 2
-    y = math.sin(X[0] + X[1]) + (X[0] - X[1]) ** 2 - 1.5 * X[0] + 2.5 * X[1] + 1  # 3
+    # y = math.sin(X[0] + X[1]) + (X[0] - X[1]) ** 2 - 1.5 * X[0] + 2.5 * X[1] + 1  # 3
     return y
 
 
 # upper and lower bounds of variables
-# bounds = [(-5.12, 5.12), (-5.12, 5.12)] # 1
+bounds = [(-5.12, 5.12), (-5.12, 5.12)] # 1
 # bounds = [(-10, 10), (-10, 10)]  # 2
-bounds = [(-1.5, 4), (-3, 4)]  # 3
+# bounds = [(-1.5, 4), (-3, 4)]  # 3
 
 nv = 2  # number of variables if 2 that means x, y
 mm = -1  # if minimization problem, mm = -1; if maximization problem, mm = 1
